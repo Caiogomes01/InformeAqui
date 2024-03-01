@@ -296,6 +296,13 @@ return [
             'url'  => 'home',
             'icon' => 'fas fa-fw fa-user',
         ],
+
+        [
+            'text' => 'Categoria',
+            'url'  => 'Categoria',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
