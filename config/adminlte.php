@@ -299,7 +299,7 @@ return [
 
         [
             'text' => 'Categoria',
-            'url'  => 'Categoria',
+            'url'  => 'categoria',
             'icon' => 'fas fa-fw fa-user',
         ],
 
