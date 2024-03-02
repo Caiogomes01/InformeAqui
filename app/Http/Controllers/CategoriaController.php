@@ -13,8 +13,9 @@ class CategoriaController extends Controller
     public function index()
     {
         $categorias = Categoria::orderBy('nome','ASC') ->get();
-        dd($categorias);
+        return view('categoria.index',['categorias' => $categorias]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +38,8 @@ class CategoriaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.show', ['categoria' => $categoria]);
     }
 
     /**

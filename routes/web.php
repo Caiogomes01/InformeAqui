@@ -28,12 +28,26 @@ Route::get('teste', [TesteController::class, 'index']);
 
 Route::get('postagem', [PostagemController::class, 'index'])->name('postagem.index');
 
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// ------------------------------ Categorias ----------------------------
+// CRUD
+// LISTAR GET
+
 Route::get('/categoria', [CategoriaController::class, 'index'])->name('categoria.index');
 
 
 
+// SHOW - GET
+Route::get('/categoria/{id}', [CategoriaController::class, 'show'])->name('categoria.show');
 
 
-Auth::routes();
+// CREATE GET / STORE POST
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// EDIT GET / UPDATE PUT
+
+// DESTROY DELETE
