@@ -23,7 +23,7 @@
                                 <tr>
                                 <th scope="row">{{ $value->id }}</th>
                                 <td>{{ $value->nome }}</td>
-                                <td><a class="btn btn-primary" href="{{ url('/categoria/' . $value->nome) }}" role="button">Visualizar</a></td>
+                                <td><a class="btn btn-primary" href="{{ url('/categoria/' . $value->id) }}" role="button">Visualizar</a></td>
                               </tr>
                               @endforeach
 
