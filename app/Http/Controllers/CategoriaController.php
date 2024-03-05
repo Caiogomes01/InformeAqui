@@ -30,7 +30,27 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+       // dd($request->all());
+
+
+       $messages = [
+        'nome.required' => 'O campo :attribute é obrigatorio!',
+
+    ];
+
+       $validated = $request->validate([
+        'nome' => 'required|min:5',
+    ],$messages);
+
+    $categoria = new categoria;
+    $categoria ->nome = $request->nome;
+    $categoria->save();
+
+    return redirect('categoria')->with('status', 'Categoria salva com sucesso!');
+
+
+
+
     }
 
     /**
@@ -47,7 +67,8 @@ class CategoriaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return view('categoria.edit', ['categoria' => $categoria]);
     }
 
     /**
@@ -55,7 +76,7 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        dd($id);
     }
 
     /**
