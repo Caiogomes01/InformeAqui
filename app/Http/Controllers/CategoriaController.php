@@ -12,10 +12,9 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        $categorias = Categoria::orderBy('nome','ASC') ->get();
-        return view('categoria.index',['categorias' => $categorias]);
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
+        return view('categoria.index', ['categorias' => $categorias]);
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -30,26 +29,21 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());
+        //dd($request->all());
 
+        $messages = [
+            'nome.required' => 'O campo :attribute é obrigatório!',
+        ];
 
-       $messages = [
-        'nome.required' => 'O campo :attribute é obrigatorio!',
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+        ], $messages);
 
-    ];
+        $categoria = new Categoria;
+        $categoria->nome = $request->nome;
+        $categoria->save();
 
-       $validated = $request->validate([
-        'nome' => 'required|min:5',
-    ],$messages);
-
-    $categoria = new categoria;
-    $categoria ->nome = $request->nome;
-    $categoria->save();
-
-    return redirect('categoria')->with('status', 'Categoria salva com sucesso!');
-
-
-
+        return redirect('categoria')->with('status', 'Categoria salva com sucesso!');
 
     }
 
@@ -76,7 +70,23 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        dd($id);
+        //dd($id);
+        //dd($request->all());
+
+        $messages = [
+            'nome.required' => 'O campo :attribute é obrigatório!',
+        ];
+
+        $validated = $request->validate([
+            'nome' => 'required|min:5',
+        ], $messages);
+
+        $categoria = Categoria::find($id);
+        $categoria->nome = $request->nome;
+        $categoria->save();
+
+        return redirect('categoria')->with('status', 'Categoria atualizada com sucesso!');
+
     }
 
     /**
@@ -84,6 +94,9 @@ class CategoriaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $categoria = Categoria::find($id);
+        $categoria->delete();
+
+        return redirect('categoria')->with('status', 'Categoria excluida com sucesso!');
     }
 }

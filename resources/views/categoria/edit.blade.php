@@ -9,33 +9,27 @@
 
                 <div class="card-body">
 
-                    @if ($errors->any())
+                @if ($errors->any())
                     <div class="alert alert-danger">
-                    <ul>
-                    @foreach ($errors->all() as $error)
-                     <li>{{ $error }}</li>
-                    @endforeach
-                    </ul>
-                 </div>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
 
+                <form method="POST" action="{{ url('/categoria/' . $categoria->id . '/edit') }}">
+                    @csrf
+                    @method('PUT')
+                  <label for="fname">Nome:</label><br>
+                  <input type="text"  class="form-control" value="{{ $categoria->nome }}" name="nome"><br><br>
+                  <input type="submit"  class="form-control" value="ENVIAR">
 
-
-
-                    <form method="POST" action="{{ url('/categoria/'  . $categoria->id . '/edit')}}">
-                        @csrf
-                        @method('PUT')
-                        <label for="fname">Nome:</label><br>
-                        <input type="text" class="form-control" value="{{$categoria->nome}}" name="nome"><br><br>
-                        <input type="submit" class="form-control" value="ENVIAR">
-
-
-                    </form>
-
-
-
+                </form>
 
                 </div>
+
             </div>
         </div>
     </div>
