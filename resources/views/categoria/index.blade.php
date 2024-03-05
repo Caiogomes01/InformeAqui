@@ -8,6 +8,11 @@
                 <div class="card-header">Categoria</div>
 
                 <div class="card-body">
+
+                    <a class="btn btn-success" href="{{ url('/categoria/create') }}" role="button">CRIAR</a>
+
+
+
                     <table class="table table-dark">
                         <table class="table">
                             <thead>
