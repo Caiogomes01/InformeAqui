@@ -1,11 +1,10 @@
 <?php
 
 namespace Database\Seeders;
-use Illuminate\Support\Facades\DB;
-
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PostagemSeeder extends Seeder
 {
@@ -15,13 +14,18 @@ class PostagemSeeder extends Seeder
     public function run(): void
     {
         DB::table('postagens')->insert([
-            'title' => "Guerra da Ucrania",
-            'content' => "Guerra terrível",
+            'titulo' => 'Bolo de chocolate',
+            'conteudo' => 'receita do bolo de chocolate',
+            'user_id' => 1,
+            'categoria_id' => 1,
         ]);
 
         DB::table('postagens')->insert([
-            'title' => "Guerra de Gaza",
-            'content' => "Guerra muito terrível",
+            'titulo' => 'Guerra da Ucrânia',
+            'conteudo' => 'O acontecimento mais triste de 2022',
+            'user_id' => 1,
+            'categoria_id' => 2,
         ]);
+
     }
 }
