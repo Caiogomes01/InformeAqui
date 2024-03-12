@@ -43,7 +43,7 @@ class PostagemController extends Controller
 
         $postagem = new Postagem;
         $postagem->titulo = $request->titulo;
-        $postagem->descicao = $request->conteudo;
+        $postagem->conteudo = $request->conteudo;
         $postagem->save();
 
         return redirect('postagem')->with('status', 'Postagem salva com sucesso!');

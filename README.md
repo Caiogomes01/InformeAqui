@@ -10,6 +10,6 @@
 
 5) Rodar no terminal "php artisan key:generate"
 
-6) Rodar no terminal "php artisan migrate"
+6) Rodar no terminal "php artisan key:generate"
 
 7) Rodar no terminar "php artisan db:seed"
