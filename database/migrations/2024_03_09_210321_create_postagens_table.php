@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -15,8 +16,8 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->text('conteudo');
-            $table->bigInteger('user_id')->nullable();
-            $table->bigInteger('categoria_id')->nullable();
+            $table->bigInteger('user_id');
+            $table->bigInteger('categoria_id');
             //$table->foreign('categoria_id')->references('id')->on('categorias');
             //$table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
