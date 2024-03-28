@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Categoria extends Model
+class Curtida extends Model
 {
     use HasFactory;
 
-    protected $table = 'categorias';
+    protected $table = 'curtidas';
 
 }

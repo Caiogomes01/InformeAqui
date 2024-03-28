@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Blog do Caio</title>
+		<title>Blog do André Neves</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{ url('assets/css/main.css') }}" />
@@ -19,14 +19,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">Blog do Caio</a></h1>
+						<h1><a href="index.html">Future Perfeito</a></h1>
 						<nav class="links">
 							<ul>
-								<li><a href="{{ url('/')}}">Inicio</a></li>
-								<li><a href="{{ url('/blog/categoria')}}">Categorias</a></li>
-								<li><a href="{{ url('/blog/autor')}}">Autor</a></li>
-								<li><a href="#">Tempus</a></li>
-								<li><a href="#">Adipiscing</a></li>
+								<li><a href="{{ url('/') }}">Início</a></li>
+								<li><a href="{{ url('/blog/categoria') }}">Categoria</a></li>
+								<li><a href="{{ url('/blog/autor') }}">Autor</a></li>
 							</ul>
 						</nav>
 						<nav class="main">
@@ -58,19 +56,19 @@
 							<section>
 								<ul class="links">
 									<li>
-										<a href="{{ url('/login')}}">
+										<a href="{{ url('/login') }}">
 											<h3>Login</h3>
 											<p>Entrar no sistema</p>
 										</a>
 									</li>
 									<li>
-										<a href="{{ url('/register')}}">
-											<h3>Registro</h3>
+										<a href="{{ url('/register') }}">
+											<h3>Register</h3>
 											<p>Faça seu registro</p>
 										</a>
 									</li>
-
-                                    <!-- <li>
+									<!--
+									<li>
 										<a href="#">
 											<h3>Feugiat veroeros</h3>
 											<p>Phasellus sed ultricies mi congue</p>
@@ -82,14 +80,14 @@
 											<p>Porta lectus amet ultricies</p>
 										</a>
 									</li>
-                                -->
+-->
 								</ul>
 							</section>
 
 						<!-- Actions -->
 							<section>
 								<ul class="actions stacked">
-									<li><a href="{{ url('/login')}}" class="button large fit">Log In</a></li>
+									<li><a href="{{ url('/login') }}" class="button large fit">Log In</a></li>
 								</ul>
 							</section>
 
@@ -98,8 +96,7 @@
 				<!-- Main -->
 					<div id="main">
 
-                        @yield('content')
-
+                    @yield('content')
 
 					</div>
 
