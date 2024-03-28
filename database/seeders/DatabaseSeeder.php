@@ -23,9 +23,9 @@ class DatabaseSeeder extends Seeder
         UserSeeder::class,
         CategoriaSeeder::class,
         PostagemSeeder::class,
+        ComentarioSeeder::class,
 
-        //PostSeeder::class,
-       // CommentSeeder::class,
+
     ]);
 
     }

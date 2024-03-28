@@ -23,8 +23,8 @@
 						<nav class="links">
 							<ul>
 								<li><a href="{{ url('/')}}">Inicio</a></li>
-								<li><a href="#">Ipsum</a></li>
-								<li><a href="#">Feugiat</a></li>
+								<li><a href="{{ url('/blog/categoria')}}">Categorias</a></li>
+								<li><a href="{{ url('/blog/autor')}}">Autor</a></li>
 								<li><a href="#">Tempus</a></li>
 								<li><a href="#">Adipiscing</a></li>
 							</ul>
