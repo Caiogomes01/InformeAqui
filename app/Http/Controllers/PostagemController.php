@@ -32,6 +32,7 @@ class PostagemController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
+        //dd($request->conteudo);
 
         $user_id = auth()->user()->id;
 
