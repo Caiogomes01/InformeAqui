@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Categoria;
+use App\Models\Postagem;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categoria_count = Categoria::count();
+        $postagem_count = Postagem::count();
+        $categorias = Categoria::get();
+        $postagem = Postagem::get();
+
+        return view('home',['categoria_count' => $categoria_count,
+                            'postagem_count'  => $postagem_count,
+                            'categorias'      => $categorias,
+                            'postagem'       => $postagem,
+
+                            ] );
     }
 }
