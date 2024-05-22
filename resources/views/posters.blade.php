@@ -497,7 +497,7 @@ footer{
                 <div class="last-reply">Ultima Resposta</div>
             </div>
             <div class="table-row">
-            <img src="http://localhost/informeaqui/public/images/i5 7400.jpg" alt="" height="90">
+                <div class="status"><img src="http://localhost/informeaqui/public/images/i5 7400.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="">Ainda vale a pena pegar o Intel i5 7400?</a>
                     <br>
@@ -506,7 +506,6 @@ footer{
                 <div class="replies">
                     9 Respostas <br> 180 Visualizações
                 </div>
-
                 <div class="last-reply">
                     12 Outubro 2022
                     <br>Criado por <b><a href="">TarcisoMoreira</a></b>
@@ -514,7 +513,7 @@ footer{
             </div>
             <!--starts here-->
             <div class="table-row">
-            <img src="http://localhost/informeaqui/public/images/ryzen7.jpg" alt="" height="90" width="90">
+                <div class="status"><img src="http://localhost/informeaqui/public/images/ryzen7.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="forum.php">Vale a pena o Ryzen 7 5700x?</a>
                     <br>
@@ -531,7 +530,7 @@ footer{
             </div>
 
             <div class="table-row">
-            <img src="http://localhost/informeaqui/public/images/i9 9900k.jpg" alt="" height="90">
+                <div class="status"><img src="http://localhost/informeaqui/public/images/i9 9900k.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="">Compensa pegar Intel Core i9-9900K em 2023?</a>
                     <br>
@@ -548,7 +547,7 @@ footer{
             </div>
 
             <div class="table-row">
-            <img src="http://localhost/informeaqui/public/images/duvida.jpg" alt="" height="90">
+                <div class="status"><img src="http://localhost/informeaqui/public/images/duvida.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="">Qual vale mais a pena, Ryzen 5 5600x ou Intel I5 12400F?</a>
                     <br>
@@ -600,7 +599,7 @@ footer{
 
 
             <div class="table-row">
-                <div class="status"><img src="http://localhost/informeaqui/public/images/duvida.jpg" width="50" height="50"></div>
+                <div class="status"><img src="http://localhost/informeaqui/public/images/duvida.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href=""> MicroATX AM5 cabe GPU + Placa de Rede PCI-E?</a>
                     <br>
@@ -634,7 +633,7 @@ footer{
             </div>
 
             <div class="table-row">
-                <div class="status"><img src="img/dual-channel.jpg" width="50" height="50"></div>
+                <div class="status"><img src="http://localhost/informeaqui/public/images/duvida.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="">Se eu ter 4 pentes de 8gb fica dualg channel?</a>
                     <br>
@@ -651,7 +650,7 @@ footer{
             </div>
 
             <div class="table-row">
-                <div class="status"><img src="img/duvida.jpg" width="50" height="50"></div>
+                <div class="status"><img src="http://localhost/informeaqui/public/images/duvida.jpg" width="90" height="90"></div>
                 <div class="subjects">
                     <a href="">Usar DDR5 Intel certificado em plataforma AMD/AM5 tem algum problema?</a>
                     <br>

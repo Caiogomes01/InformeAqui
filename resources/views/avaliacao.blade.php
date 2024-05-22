@@ -76,7 +76,7 @@ h1{
 }
 
 .subforum-devider{
-    display: none;   
+    display: none;
 }
 
 
@@ -100,7 +100,7 @@ h1{
         background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
     }
 
-    
+
 
   }
 
@@ -202,11 +202,11 @@ header{
     .navigation{
         max-height: auto;
     }
-    
+
     .close-icon i{
         font-size:30px;
     }
-    
+
     .nav-item a{
         float:left;
         display:inline;
@@ -214,12 +214,12 @@ header{
         font-size: 10px;
         padding: 5px;
     }
-    
-    
+
+
     .bar-icon{
         font-size: 30px;
     }
- 
+
     .brand{
         font-size:20px;
     }
@@ -260,7 +260,7 @@ header{
     .search-box input, .search-box button, .search-box select{
         min-width: 300px;
         margin-top: 5px;
-    }    
+    }
 
 }
 
@@ -508,9 +508,9 @@ footer{
                 <div class="content">
                    Olá gente, estou pensando em comprar o ryzen 7 5700x, porem não entendo muito sobre processadores e gostaria de saber a opinião de vocês sobre esse hardware.
                     <br><br>
-                   
+
                     <br>
-      
+
                     <br>
                     <div class="comment">
                         <button onclick="showComment()">Comente</button>
@@ -539,7 +539,7 @@ footer{
                     Por ter 8/16 núcleos e velocidade limite de 4.6 ghz em stock, atende as tarefas domesticas bem e para jogos atende bem, pode se fazer overclock, desde que tenha uma boa refrigeração se não ele esquenta. Em overclock o ganho é pouco. Se puder use watercooler de 360 mm.To see how it looks like.
                     <br>
                     <br><br>
-                    
+
                     <br>
                     <br>
                     <div class="comment">
@@ -582,7 +582,7 @@ footer{
             <textarea name="reply" id="" placeholder="responda aqui ... "></textarea>
             <input type="submit" value="submit">
         </div>
-        
+
 
     </div>
     <footer>
