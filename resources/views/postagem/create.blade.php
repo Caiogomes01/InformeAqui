@@ -24,7 +24,7 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ url('/postagem/create') }}">
+                <form method="POST" action="{{ url('/postagem/create') }}"enctype="multipart/form-data">
                     @csrf
 
 
@@ -39,6 +39,13 @@
 
                   <label for="fname">Título:</label><br>
                   <input type="text"  class="form-control" name="titulo"><br>
+
+                  <div class="mb-3">
+                                <div class="form-floating mb-3 mt-3 text-muted">
+                                    <label for="myfile">Selecione uma foto</label>
+                                    <input type="file" class="form-control" id="myfile" name="foto">
+                                </div>
+                            </div>
 
                   <label for="fname">Conteúdo:</label><br>
                   <textarea id="inp_editor1" class="form-control" name="conteudo">

@@ -12,6 +12,11 @@ use App\Models\Curtida;
 class BlogController extends Controller
 {
 
+    public function principal(){
+        $postagens = Postagem::orderBy('id', 'DESC')->get();
+        return view('principal', ['postagens' => $postagens]);
+    }
+
     public function index()
     {
         $postagens = Postagem::orderBy('id', 'DESC')->get();

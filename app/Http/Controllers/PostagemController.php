@@ -46,8 +46,11 @@ class PostagemController extends Controller
             'conteudo' => 'required|min:5',
         ], $messages);
 
+        $foto = $request->file('foto');
+
         $postagem = new Postagem;
         $postagem->titulo = $request->titulo;
+        $postagem->foto = base64_encode (file_get_contents ($foto));
         $postagem->conteudo = $request->conteudo;
         $postagem->user_id = $user_id;
         $postagem->categoria_id = $request->categoria_id;

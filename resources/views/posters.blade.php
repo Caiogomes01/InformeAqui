@@ -513,7 +513,8 @@ footer{
             <span><a href="">InformeAqui - Forums</a> >> <a href="">random subforum</a></span>
         </div>
         <!--Display posts table-->
-        <div class="posts-table">
+        @foreach($postagens as $value)
+            <div class="posts-table">
             <div class="table-head">
                 <div class="status">Status</div>
                 <div class="subjects">Subjects</div>
@@ -521,9 +522,9 @@ footer{
                 <div class="last-reply">Ultima Resposta</div>
             </div>
             <div class="table-row">
-                <div class="status"><img src="http://localhost/informeaqui/public/images/i5 7400.jpg" width="100" height="100"></div>
+                <div class="status"><img src="data:image/png;base64,{{ $value->foto }}"width="100" height="100" /></div>
                 <div class="subjects">
-                    <a href="">Ainda vale a pena pegar o Intel i5 7400?</a>
+                    <a href="">{{ $value->titulo }}</a>
                     <br>
                     <span>Criado por <b><a href="">Alads</a></b> .</span>
                 </div>
@@ -531,11 +532,63 @@ footer{
                     9 Respostas <br> 180 Visualizações
                 </div>
                 <div class="last-reply">
-                    12 Outubro 2022
+                    <small class="text-muted">{{ $value->created_at }}</small>
                     <br>Criado por <b><a href="">TarcisoMoreira</a></b>
                 </div>
             </div>
-            <!--starts here-->
+            @endforeach
+
+
+
+
+
+{{--              --}}
+            <!--ends here-->
+        </div>
+        <!--Pagination starts-->
+            <div class="pagination">
+                pages: <a href="">1</a><a href="">2</a><a href="">3</a>
+            </div>
+        <!--pagination ends-->
+    </div>
+
+    <footer>
+        <span>&copy;  © 2023 - 2024. Todos direitos reservados InformeAqui</span>
+    </footer>
+    <script>
+        //NavBar
+function hideIconBar(){
+    var iconBar = document.getElementById("iconBar");
+    var navigation = document.getElementById("navigation");
+    iconBar.setAttribute("style", "display:none;");
+    navigation.classList.remove("hide");
+}
+
+function showIconBar(){
+    var iconBar = document.getElementById("iconBar");
+    var navigation = document.getElementById("navigation");
+    iconBar.setAttribute("style", "display:block;");
+    navigation.classList.add("hide");
+}
+
+//Comment
+function showComment(){
+    var commentArea = document.getElementById("comment-area");
+    commentArea.classList.remove("hide");
+}
+
+//Reply
+function showReply(){
+    var replyArea = document.getElementById("reply-area");
+    replyArea.classList.remove("hide");
+}
+    </script>
+</body>
+</html>
+
+
+
+            {{-- <!--starts here-->
             <div class="table-row">
                 <div class="status"><img src="http://localhost/informeaqui/public/images/ryzen7.jpg" width="90" height="90"></div>
                 <div class="subjects">
@@ -688,46 +741,4 @@ footer{
                     1 Março 2021
                     <br>Criado por <b><a href="">CuequinhaFreiada</a></b>
                 </div>
-            </div>
-            <!--ends here-->
-        </div>
-        <!--Pagination starts-->
-            <div class="pagination">
-                pages: <a href="">1</a><a href="">2</a><a href="">3</a>
-            </div>
-        <!--pagination ends-->
-    </div>
-
-    <footer>
-        <span>&copy;  © 2023 - 2024. Todos direitos reservados InformeAqui</span>
-    </footer>
-    <script>
-        //NavBar
-function hideIconBar(){
-    var iconBar = document.getElementById("iconBar");
-    var navigation = document.getElementById("navigation");
-    iconBar.setAttribute("style", "display:none;");
-    navigation.classList.remove("hide");
-}
-
-function showIconBar(){
-    var iconBar = document.getElementById("iconBar");
-    var navigation = document.getElementById("navigation");
-    iconBar.setAttribute("style", "display:block;");
-    navigation.classList.add("hide");
-}
-
-//Comment
-function showComment(){
-    var commentArea = document.getElementById("comment-area");
-    commentArea.classList.remove("hide");
-}
-
-//Reply
-function showReply(){
-    var replyArea = document.getElementById("reply-area");
-    replyArea.classList.remove("hide");
-}
-    </script>
-</body>
-</html>
+            </div> --}}

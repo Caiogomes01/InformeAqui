@@ -10,6 +10,8 @@
                 <div class="card-body">
                     <strong>Categoria</strong>       {{ $postagem->categoria->nome }}<br>
                     <strong>Título:</strong>          {{ $postagem->titulo }}<br>
+                    <img src="data:image/png;base64,{{ $postagem->foto }}" />
+
                     <strong>Autor:</strong>          {{ $postagem->user->name }}<br>
                     <strong>Conteúdo:</strong>
                     <br>

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->longText('conteudo');
             $table->bigInteger('user_id');
             $table->bigInteger('categoria_id');
+            $table->longText('foto')->nullable();
             //$table->foreign('categoria_id')->references('id')->on('categorias');
             //$table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

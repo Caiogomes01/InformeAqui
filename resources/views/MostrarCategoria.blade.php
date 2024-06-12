@@ -76,7 +76,7 @@ h1{
 }
 
 .subforum-devider{
-    display: none;   
+    display: none;
 }
 
 
@@ -100,7 +100,7 @@ h1{
         background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
     }
 
-    
+
 
   }
 
@@ -202,11 +202,11 @@ header{
     .navigation{
         max-height: auto;
     }
-    
+
     .close-icon i{
         font-size:30px;
     }
-    
+
     .nav-item a{
         float:left;
         display:inline;
@@ -214,12 +214,12 @@ header{
         font-size: 10px;
         padding: 5px;
     }
-    
-    
+
+
     .bar-icon{
         font-size: 30px;
     }
- 
+
     .brand{
         font-size:20px;
     }
@@ -260,7 +260,7 @@ header{
     .search-box input, .search-box button, .search-box select{
         min-width: 300px;
         margin-top: 5px;
-    }    
+    }
 
 }
 
@@ -492,20 +492,20 @@ footer{
                 <div class="subforum-icon subforum-column center">
                 <img src="http://localhost/informeaqui/public/images/i5 7400.jpg" width="95" height="95">                </div>
                 <div class="subforum-description subforum-column">
-                    <h4><a href="posters.php">PROCESSADOR</a></h4>
+                    <h4><a href="{{route('posters')}}">PROCESSADOR</a></h4>
                     <p>O processador, ou CPU, é o cérebro do computador, responsável por executar instruções, realizar cálculos e coordenar operações. Sua eficiência depende da velocidade de clock, do número de núcleos, da capacidade de execução de instruções e da memória cache. A velocidade de clock indica a rapidez das operações, núcleos múltiplos permitem multitarefa, a capacidade de execução influencia a eficiência e a cache agiliza o acesso a dados frequentemente usados.</p>
                 </div>
                 <div class="subforum-stats subforum-column center">
                     <span>24 Posters | 70 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo poster</a></b> by <a href="perfil-usuario1.html">DenisDenis</a> 
+                    <b><a href="">Ultimo poster</a></b> by <a href="perfil-usuario1.html">DenisDenis</a>
                     <br>on <small>1 Maio 2023</small>
                 </div>
             </div>
         </div>
         <!--More-->
-        
+
         <div class="subforum">
             <div class="subforum-title">
                 <h1>Outros Hardware</h1>
@@ -522,7 +522,7 @@ footer{
                     <span>24 Posters | 130 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo poster</a></b> by <a href="">Dumel1</a> 
+                    <b><a href="">Ultimo poster</a></b> by <a href="">Dumel1</a>
                     <br>on <small>2 Janeiro 2024</small>
                 </div>
             </div>
@@ -539,7 +539,7 @@ footer{
                     <span>64 Posters | 200 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo poster</a></b> by <a href="">Snay12</a> 
+                    <b><a href="">Ultimo poster</a></b> by <a href="">Snay12</a>
                     <br>on <small>12 Agosto 2020</small>
                 </div>
             </div>
@@ -556,7 +556,7 @@ footer{
                     <span>13 Posters | 36 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo posters</a></b> by <a href="">Ferzer2</a> 
+                    <b><a href="">Ultimo posters</a></b> by <a href="">Ferzer2</a>
                     <br>on <small>7 Fevereiro 2022</small>
                 </div>
             </div>
@@ -573,7 +573,7 @@ footer{
                     <span>2 Posters | 8 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo posters</a></b> by <a href="">antonio2silva</a> 
+                    <b><a href="">Ultimo posters</a></b> by <a href="">antonio2silva</a>
                     <br>on <small>29 Setembro 2023</small>
                 </div>
             </div>
@@ -590,12 +590,12 @@ footer{
                     <span>32 Posts | 78 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo posters</a></b> by <a href="">Rodrigao202</a> 
+                    <b><a href="">Ultimo posters</a></b> by <a href="">Rodrigao202</a>
                     <br>on <small>22 Agosto 2022</small>
                 </div>
             </div>
         </div>
-        
+
         <div class="subforum">
             <div class="subforum-title">
                 <h1>Eletronicos</h1>
@@ -612,7 +612,7 @@ footer{
                     <span>24 Posts | 15 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo posters</a></b> by <a href="">Darius292</a> 
+                    <b><a href="">Ultimo posters</a></b> by <a href="">Darius292</a>
                     <br>on <small>13 Março 2020</small>
                 </div>
             </div>
@@ -629,7 +629,7 @@ footer{
                     <span>182 Posters | 350 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo posters</a></b> by <a href="">teemo2939</a> 
+                    <b><a href="">Ultimo posters</a></b> by <a href="">teemo2939</a>
                     <br>on <small>14 Outubro 2023</small>
                 </div>
             </div>
@@ -646,7 +646,7 @@ footer{
                     <span>4 Posters | 0 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo poster</a></b> by <a href="">Sage2009</a> 
+                    <b><a href="">Ultimo poster</a></b> by <a href="">Sage2009</a>
                     <br>on <small>12 Novembro 2021</small>
                 </div>
             </div>
@@ -663,21 +663,21 @@ footer{
                     <span>1 Posters | 2 Comentarios</span>
                 </div>
                 <div class="subforum-info subforum-column">
-                    <b><a href="">Ultimo poster</a></b> by <a href="">Jorginho2111</a> 
+                    <b><a href="">Ultimo poster</a></b> by <a href="">Jorginho2111</a>
                     <br>on <small>1 Abril 2022</small>
                 </div>
             </div>
 
-           
+
         </div>
-    
+
     </div>
 
     <footer>
         <span>&copy;  © 2023 - 2024. Todos direitos reservados InformeAqui</span>
     </footer>
     <script>
-    
+
     //NavBar
 function hideIconBar(){
     var iconBar = document.getElementById("iconBar");

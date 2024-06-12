@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostagemController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PerfilController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +27,24 @@ Route::get('/', function () {
 
 Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 
+Route::get('/principal', [BlogController::class, 'principal'])->name('blog.principal');
+
+
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+    Route::get('/perfil', [App\Http\Controllers\PerfilController::class, 'perfil'])->name('perfil.perfil');
+    Route::post('/perfil/{id}/edit', [App\Http\Controllers\PerfilController::class, 'perfilUpdate'])->name('perfil.update');
+
+
+    Route::get('/posters', [App\Http\Controllers\postersController::class, 'index'])->name('posters');
+
+    Route::get('/MostrarCategoria', [App\Http\Controllers\MostrarCategoriaController::class, 'index'])->name('MostrarCategoria');
+
 
     // ------------------------------ CRUD CATEGORIA ---------------------------------------------
 
