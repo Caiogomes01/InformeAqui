@@ -7,6 +7,12 @@ use App\Models\Categoria;
 
 class CategoriaController extends Controller
 {
+
+    public function MostrarCategoria(){
+
+        $categorias = Categoria::orderBy('nome', 'ASC')->get();
+        return view('MostrarCategoria', ['categorias' => $categorias]);
+    }
     /**
      * Display a listing of the resource.
      */

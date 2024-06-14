@@ -43,7 +43,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/posters', [App\Http\Controllers\postersController::class, 'index'])->name('posters');
 
-    Route::get('/MostrarCategoria', [App\Http\Controllers\MostrarCategoriaController::class, 'index'])->name('MostrarCategoria');
+    Route::get('/MostrarCategoria', [App\Http\Controllers\CategoriaController::class, 'MostrarCategoria'])->name('MostrarCategoria');
+
+    Route::get('/MostrarPostagens/{id}', [App\Http\Controllers\PostagemController::class, 'MostrarPostagens'])->name('MostrarPostagens');
+
+    Route::get('/MostrarPostagem/{id}', [App\Http\Controllers\PostagemController::class, 'MostrarPostagem'])->name('MostrarPostagem');
+
 
 
     // ------------------------------ CRUD CATEGORIA ---------------------------------------------

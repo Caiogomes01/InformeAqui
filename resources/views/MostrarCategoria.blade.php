@@ -484,15 +484,21 @@ footer{
         </div>
     </header>
     <div class="container">
+
+
+    @foreach ($categorias as $categoria)
         <div class="subforum">
             <div class="subforum-title">
-                <h1>Hardware</h1>
+                <h1><a href="{{ url('MostrarPostagens/' . $categoria->id) }}">{{ $categoria->nome }}</a></h1>
             </div>
+    @endforeach
+<!--     
+            {{--@foreach ($categoria->postagem as $value)
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                <img src="http://localhost/informeaqui/public/images/i5 7400.jpg" width="95" height="95">                </div>
+                <img src="{{url('./images/processador.jpg')}}" width="95" height="95">                </div>
                 <div class="subforum-description subforum-column">
-                    <h4><a href="{{route('posters')}}">PROCESSADOR</a></h4>
+                    <h4><a href="{{route('posters')}}">{{ $value->titulo }}</a></h4>
                     <p>O processador, ou CPU, é o cérebro do computador, responsável por executar instruções, realizar cálculos e coordenar operações. Sua eficiência depende da velocidade de clock, do número de núcleos, da capacidade de execução de instruções e da memória cache. A velocidade de clock indica a rapidez das operações, núcleos múltiplos permitem multitarefa, a capacidade de execução influencia a eficiência e a cache agiliza o acesso a dados frequentemente usados.</p>
                 </div>
                 <div class="subforum-stats subforum-column center">
@@ -503,16 +509,24 @@ footer{
                     <br>on <small>1 Maio 2023</small>
                 </div>
             </div>
+            @endforeach --}}
+
         </div>
+
+
+
+
+
+
         <!--More-->
 
-        <div class="subforum">
+        <!-- <div class="subforum">
             <div class="subforum-title">
                 <h1>Outros Hardware</h1>
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="http://localhost/informeaqui/public/images/placadevideo.jpg" heigth="95" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/placadevideo.jpg')}}" heigth="95" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Placa de Vídeo</a></h4>
@@ -529,7 +543,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="http://localhost/informeaqui/public/images/memoriaram.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/memoriaram.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Memória RAM</a></h4>
@@ -546,7 +560,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="http://localhost/informeaqui/public/images/placa_mae_aorus.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/Placamae.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Placa Mãe Gigabyte B550M AORUS Elite</a></h4>
@@ -563,7 +577,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="http://localhost/informeaqui/public/images/ssd_500gb_kingston.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/ssd_500gb_kingston.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">SSD Kingston NV2 500GB</a></h4>
@@ -580,7 +594,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="http://localhost/informeaqui/public/images/fonte_msi_650w.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/fonte_msi_650w.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Fonte</a></h4>
@@ -602,7 +616,7 @@ footer{
             </div>
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/tv_40_britania.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/tv_40_britania.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Smart Tv</a></h4>
@@ -619,7 +633,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/s20_128gb.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/iphone15pro.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Smartphone</a></h4>
@@ -636,7 +650,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/caixa_de_som.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/caixa_de_som.png')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Caixa De Som</a></h4>
@@ -653,7 +667,7 @@ footer{
             <hr class="subforum-devider">
             <div class="subforum-row">
                 <div class="subforum-icon subforum-column center">
-                    <img src="img/console.jpg" alt="Nome do Produto" style="width: 100px; height: 100px;">
+                    <img src="{{url('./images/usuario3.jpg')}}" alt="Nome do Produto" style="width: 100px; height: 100px;">
                 </div>
                 <div class="subforum-description subforum-column">
                     <h4><a href="#">Console</a></h4>
@@ -671,7 +685,7 @@ footer{
 
         </div>
 
-    </div>
+    </div> -->
 
     <footer>
         <span>&copy;  © 2023 - 2024. Todos direitos reservados InformeAqui</span>

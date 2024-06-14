@@ -8,6 +8,20 @@ use App\Models\Categoria;
 
 class PostagemController extends Controller
 {
+
+    public function MostrarPostagem($id){
+
+        $postagem = Postagem::find($id);
+        return view('MostrarPostagem', ['postagem' => $postagem]);
+
+    }
+
+    public function MostrarPostagens($id){
+
+        $postagens = Postagem::where('categoria_id', $id)->orderBy('titulo', 'ASC')->get();
+        return view('MostrarPostagens', ['postagens' => $postagens]);
+
+    }
     /**
      * Display a listing of the resource.
      */
