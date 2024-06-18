@@ -21,37 +21,10 @@
             margin: 0 auto; /* Para centralizar a imagem */
         }
 
-        *{
-    box-sizing: border-box;
-}
 
-body{
-    font-size: 14px;
-    font-family: 'Titillium Web', sans-serif;
-    background-color:rgb(0,0,0);
-    color:#FEFEFE;
-    text-align:center;
-}
-
-#categorias {
-    color:#FF0042;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-h1{
-    font-size:16px;
-    font-weight: bolder;
-}
-
-
-.container{
-    margin: 20px;
-    padding: 20px;
-}
 
 header {
-    border: solid 2px #52057b;
+    background-color: #6A5ACD; /* Purple */
     padding: 20px;
 }
 
@@ -71,6 +44,9 @@ nav ul li a {
     text-decoration: none;
 }
 
+main {
+    padding: 20px;
+}
 
 #destaque, #categorias {
     background-color: white;
@@ -81,7 +57,7 @@ nav ul li a {
 
 
     </style>
-    <div class="container text-center">
+    <div class="container">
 
 </head>
 <body>
@@ -133,7 +109,7 @@ nav ul li a {
     </div>
 
     <main>
-        <section class="text-center" id="destaque">
+        <section id="destaque">
             <h2>Destaque</h2>
             <!-- Incluir conteúdo em destaque (posts, notícias, etc.) -->
 
@@ -189,4 +165,40 @@ nav ul li a {
 </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+{{-- @foreach ($postagens as $value)
+						<!-- Post -->
+							<article class="post">
+								<header>
+									<div class="title">
+										<h2><a href="#">{{ $value->titulo }}</a></h2>
+										<p></p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">{{ \Carbon\Carbon::parse($value->created_at)->format('d/m/Y h:i:s') }}</time>
+										<a href="#" class="author"><span class="name">{{ $value->user->name }}</span><img src="{{ url('images/avatar.jpg') }}" alt="" /></a>
+									</div>
+								</header>
+								<p>{!! $value->conteudo !!}</p>
+								<footer>
+									<ul class="stats">
+										<li><a href="#">{{ $value->categoria->nome }}</a></li>
+										<li><a href="" class="icon solid fa-heart">{{ $value->curtidas->count() }}</a></li>
+										@auth
+											<li><a href="{{ url('/blog/curtida/' . $value->id) }}" class="icon solid fa-heart">CURTIR</a></li>
+										@endauth
+										<li><a href="{{ url('/blog/postagem/' . $value->id) }}" class="icon solid fa-comment">{{ $value->comentarios->count() }} comenários</a></li>
+									</ul>
+								</footer>
+							</article>
+@endforeach--}}
 
