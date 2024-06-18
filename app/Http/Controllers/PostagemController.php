@@ -11,15 +11,18 @@ class PostagemController extends Controller
 
     public function MostrarPostagem($id){
 
+        //$postagens = Postagem::where('categoria_id', $id)->orderBy('titulo', 'ASC')->get();
         $postagem = Postagem::find($id);
-        return view('MostrarPostagem', ['postagem' => $postagem]);
+        //dd($postagens);
+        return view('MostrarPostagem', ['postagem' => $postagem]); //, 'postagens' => $postagens
 
     }
 
     public function MostrarPostagens($id){
 
         $postagens = Postagem::where('categoria_id', $id)->orderBy('titulo', 'ASC')->get();
-        return view('MostrarPostagens', ['postagens' => $postagens]);
+        $postagem = Postagem::where('categoria_id', $id)->orderBy('titulo', 'ASC')->get();
+        return view('MostrarPostagens', ['postagem' => $postagem, 'postagens' => $postagens]);
 
     }
     /**

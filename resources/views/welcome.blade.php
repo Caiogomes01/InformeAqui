@@ -86,7 +86,7 @@ main {
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{url('./images/404.jpg')}}" class="d-block" alt="Imagem 1">
+                <img src="{{url('./images/memoria_corsair_16gb.jpg')}}" class="d-block" alt="Imagem 1">
             </div>
             <div class="carousel-item">
                 <img src="{{url('./images/alexia_5.jpg')}}" class="d-block" alt="Imagem 2">

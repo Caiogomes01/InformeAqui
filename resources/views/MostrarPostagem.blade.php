@@ -496,43 +496,36 @@ footer{
                 <div class="authors">Autor</div>
                 <div class="content">Topic: random topic (Read 1325 Times)</div>
             </div>
-
-            {{$postagem->titulo}}
-            @foreach($postagem->cometarios as $value)
-
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="perfil-usuario1.html">@DenisDenis</a></div>
-                    <div>Usuario</div>
-                    <img src="http://localhost/informeaqui/public/images/usuario3.jpg" alt="">
-                    <div>Posters: <u>45</u></div>
-                    <div>Comentarios: <u>121</u></div>
-                </div>
-                <div class="content">
-                   Olá gente, estou pensando em comprar o ryzen 7 5700x, porem não entendo muito sobre processadores e gostaria de saber a opinião de vocês sobre esse hardware.
-                    <br><br>
-
-                    <br>
-
-                    <br>
-                    <div class="comment">
-                        <button onclick="showComment()">Comente</button>
-                    </div>
-                </div>
-            </div>
-            @endforeach
-
-
         </div>
 
-        <!--Comment Area-->
+            <br>
+            <div class="card-body">
+                    <strong>Categoria</strong>       {{ $postagem->categoria->nome }}<br>
+                    <strong>Título:</strong>          {{ $postagem->titulo }}<br>
+
+                    <br>
+                    <strong>Autor:</strong>          {{ $postagem->user->name }}<br>
+                    <strong>Conteúdo:</strong>
+                    <br>
+                    {!! $postagem->conteudo !!}
+                    <br>
+                                        <img src="data:image/png;base64,{{ $postagem->foto }}"/> <br>
+                    <strong>Criação:</strong>       {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:i:s') }}<br>
+                    <strong>Atualização:</strong>   {{ \Carbon\Carbon::parse($postagem->updated_at)->format('d/m/Y h:i:s') }}<br>
+            </div>
+
+
+
+
+
+        <!-- Comment Area
         <div class="comment-area hide" id="comment-area">
             <textarea name="comment" id="" placeholder="comente aqui ... "></textarea>
             <input type="submit" value="submit">
-        </div>
+        </div> -->
 
         <!--Comments Section-->
-        <div class="comments-container">
+       <!-- <div class="comments-container">
             <div class="body">
                 <div class="authors">
                     <div class="username"><a href="perfil-usuario2.html">@Danilo72</a></div>
@@ -553,41 +546,8 @@ footer{
                     </div>
                 </div>
             </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="responda aqui... "></textarea>
-            <input type="submit" value="submit">
-        </div>
+        </div> -->
 
-
-        <!--Another Comment With replies-->
-        <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="perfil-usuario3.html">@Amanda1_</a></div>
-                    <div>Usuario</div>
-                    <img src="http://localhost/informeaqui/public/images/usuario2.jpg" alt="">
-                    <div>Posters: <u>12</u></div>
-                    <div>Comentarios: <u>36</u></div>
-                </div>
-                <div class="content">
-                    Perfeito, desempenho excelente, Exerce perfeitamente o processamento em seus núcleos, Assim como todos da AMD, temperatura, mais nada que não se resolva com um bom Decipador de calor
-                    <br>
-                    <br><br>
-                    <br>
-                    <br>
-                    <div class="comment">
-                        <button onclick="showReply()">Responder</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Reply Area-->
-        <div class="comment-area hide" id="reply-area">
-            <textarea name="reply" id="" placeholder="responda aqui ... "></textarea>
-            <input type="submit" value="submit">
-        </div>
 
 
     </div>

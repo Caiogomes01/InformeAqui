@@ -512,6 +512,7 @@ footer{
         <div class="navigate">
             <span><a href="">InformeAqui - Forums</a> >> <a href="">random subforum</a></span>
         </div>
+
         <!--Display posts table-->
         @foreach($postagens as $value)
             <div class="posts-table">
