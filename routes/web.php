@@ -29,11 +29,15 @@ Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 
 Route::get('/principal', [BlogController::class, 'principal'])->name('blog.principal');
 
+// Route::get('/MostrarPostagens/{id}/curtida/{id}', [App\Http\Controllers\Listar_PubliController::class, 'curtida'])->name('MostrarPostagens.curtida')->middleware('auth');
+
+Route::get('/curtida/{id}',[App\Http\Controllers\CurtidaController::class, 'curtida'])->name('MostrarPostagens.curtida')->middleware('auth');
+
 
 Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
-
+    
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
@@ -116,6 +120,6 @@ Route::get('/blog/autor/{id}', [BlogController::class, 'autorPostagem'])->name('
 
 Route::get('/blog/postagem/{id}', [BlogController::class, 'postagem'])->name('blog.postagem');
 
-Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario')->middleware('auth');
+Route::post('blog/postagemComentario/{id}', [BlogController::class, 'postagemComentario'])->name('blog.postagemComentario');
 
-Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida')->middleware('auth');
+Route::get('blog/curtida/{id}', [BlogController::class, 'curtida'])->name('blog.curtida');

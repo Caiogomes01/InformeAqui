@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
 
 *{
@@ -465,7 +466,7 @@ footer{
                 <ul class="nav-list">
                     <li class="nav-item"><a href="forum.php">Autor</a></li>
                     <li class="nav-item"><a href="posters.php">Cateogira</a></li>
-                    <li class="nav-item"><a href="inicio.php">Inicio</a></li>
+                    <li class="nav-item"><a href={{ url("/") }}>Inicio</a></li>
                 </ul>
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
@@ -483,6 +484,8 @@ footer{
                 <button><i class="fa fa-search"></i></button>
             </div>
         </div>
+
+
     <div class="container">
         <!--Navigation-->
         <div class="navigate">
@@ -512,30 +515,24 @@ footer{
                                         <img src="data:image/png;base64,{{ $postagem->foto }}"/> <br>
                     <strong>Criação:</strong>       {{ \Carbon\Carbon::parse($postagem->created_at)->format('d/m/Y h:i:s') }}<br>
                     <strong>Atualização:</strong>   {{ \Carbon\Carbon::parse($postagem->updated_at)->format('d/m/Y h:i:s') }}<br>
+
+                    <a href="{{ url('curtida/' . $postagem->id) }}">Curtir  </a> {{ $postagem->curtidas->count() }}
+                    <!-- <a href="{{ url('curtida/' . $postagem->id) }}">Curtir  </a> {{ $postagem->curtidas->count() }} -->
+
+                                     <i class="bi bi-heart p-2"></i>
+             
+                           <i class="bi bi-chat-left p-2"></i>
+                            | {{ $postagem->comentarios->count() }}
+
+             
+
             </div>
 
 
-
-
-
-        <!-- Comment Area
-        <div class="comment-area hide" id="comment-area">
-            <textarea name="comment" id="" placeholder="comente aqui ... "></textarea>
-            <input type="submit" value="submit">
-        </div> -->
-
-        <!--Comments Section-->
-       <!-- <div class="comments-container">
-            <div class="body">
-                <div class="authors">
-                    <div class="username"><a href="perfil-usuario2.html">@Danilo72</a></div>
-                    <div>Usuario</div>
-                    <img src="http://localhost/informeaqui/public/images/usuario1.jpg" alt="">
-                    <div>Posters: <u>15</u></div>
-                    <div>Comentarios: <u>21</u></div>
-                </div>
+            <form class="form-inline " method="post" action="{{ route('blog.postagemComentario', $postagem->id) }}">
+                    @csrf
                 <div class="content">
-                    Por ter 8/16 núcleos e velocidade limite de 4.6 ghz em stock, atende as tarefas domesticas bem e para jogos atende bem, pode se fazer overclock, desde que tenha uma boa refrigeração se não ele esquenta. Em overclock o ganho é pouco. Se puder use watercooler de 360 mm.To see how it looks like.
+                <textarea name="conteudo" class="form-control" id="conteudo" placeholder="Comentar"></textarea>
                     <br>
                     <br><br>
 
@@ -545,12 +542,33 @@ footer{
                         <button onclick="showReply()">Responder</button>
                     </div>
                 </div>
+        </form>
+                   
+               
+
+
+        </div>
+
+        
+       <div class="comments-container">
+       Comentários:
+       @foreach ($postagem->comentarios as $comentario)
+            <div class="body">
+            
+                <div class="authors">
+                    <div class="username"><a href="perfil-usuario2.html"><p>Feito por: {{ $comentario->user->name }} - Data: {{ $comentario->created_at }}</p></p></a></div>
+                    <div><p>{{ $comentario->conteudo }}</p></div>
+                    <img src="http://localhost/informeaqui/public/images/usuario1.jpg" alt="">
+                </div>
+
+        
             </div>
-        </div> -->
+        </div>
+        @endforeach
 
 
 
-    </div>
+    
     <footer>
         <span>&copy;   © 2023 - 2024. Todos direitos reservados InformeAqui</span>
     </footer>

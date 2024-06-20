@@ -50,13 +50,15 @@ class BlogController extends Controller
 
     public function postagemComentario(Request $resquest, $id){
 
+        $user = User::find($id);
+
         $comentario = new Comentario;
         $comentario->conteudo = $resquest->conteudo;
         $comentario->user_id = auth()->user()->id;
         $comentario->postagem_id = $id;
         $comentario->save();
 
-        return redirect()->route('blog.postagem', $id);
+        return redirect()->route('MostrarPostagem', $id);
 
     }
 

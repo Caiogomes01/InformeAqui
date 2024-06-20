@@ -464,7 +464,7 @@ footer{
                 <ul class="nav-list">
                     <li class="nav-item"><a href="forum.php">Autor</a></li>
                     <li class="nav-item"><a href="posters.php">Categoria</a></li>
-                    <li class="nav-item"><a href="inicio.php">Inicio</a></li>
+                    <li class="nav-item"><a href={{ url("/") }}>Inicio</a></li>
                 </ul>
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>

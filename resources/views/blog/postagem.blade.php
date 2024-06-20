@@ -22,7 +22,7 @@
 										<li><a href="#" class="icon solid fa-heart">{{ $postagem->curtidas->count() }}</a></li>
 										<li><a href="{{ url('/blog/postagem/' . $postagem->id) }}" class="icon solid fa-comment">Esta postagem possui {{ $postagem->comentarios->count() }} comentário!</a></li>
 
-                                        @auth
+                                       
 
                                         <form action="{{ route('blog.postagemComentario', $postagem->id) }}" method="post">
                                             @csrf
@@ -30,19 +30,9 @@
                                             <button type="submit" class="btn btn-danger">Comentar</button>
                                         </form>
 
-                                        @endauth
 
 									</ul>
 								</footer>
-
-                                <h3>Comentários:</h3>
-
-                                @foreach ($postagem->comentarios as $comentario)
-
-                                    <p>{{ $comentario->conteudo }}</p>
-                                    <p>Feito por: {{ $comentario->user->name }} - Data: {{ $comentario->created_at }}</p>
-
-                                @endforeach
 
 							</article>
 

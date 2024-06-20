@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,7 +9,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- imagens -->
-    <style>
+    
+    
+<style>
         .carousel-item img {
             /*width:  300px; /* Defina o tamanho máximo desejado */
             height: 400px;
@@ -21,7 +20,7 @@
             margin: 0 auto; /* Para centralizar a imagem */
         }
 
-        *{
+*{
     box-sizing: border-box;
 }
 
@@ -33,68 +32,79 @@ body{
     text-align:center;
 }
 
-#categorias {
-    color:#FF0042;
-    font-weight: bolder;
-    text-decoration: none;
-}
 
 h1{
     font-size:16px;
     font-weight: bolder;
 }
 
+header {
+   border: solid 2px #52057b;
+   margin: 30px;
+   padding: 20px; 
+}
 
-.container{
+nav a{
+  padding: 5px;
+  color: white;
+}
+nav a:hover{
+  color:#FF0042;
+  font-weight: bolder;
+  text-decoration: none; 
+}
+
+#categorias a{
+  padding: 5px;
+  color: white;
+  text-align:center;
+}
+#categorias a:hover{
+  color:#FF0042;
+  font-weight: bolder;
+  text-decoration: none; 
+}
+
+
+#categorias h2{
+  color:#FF0042;
+  font-weight: bolder;
+}
+
+#destaque img {
+     width: 350px;
+     height: 250px;
+     padding-left: 20px; 
+     padding-top: 20px; 
+     
+}
+
+
+footer {
     margin: 20px;
     padding: 20px;
+    background-color: #52057b;
+    text-align: center;
 }
-
-header {
-    border: solid 2px #52057b;
-    padding: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-
-#destaque, #categorias {
-    background-color: white;
-    color: black;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
 
     </style>
-    <div class="container text-center">
-
 </head>
-<body>
-    <header class="mb-5 d-flex px-3">
 
+<body>
+
+ <div class="container">
+    <header class="mb-5 d-flex">
+
+<div>
             <a href="file:///C:/Users/monteiro.sergio/Downloads/Nova%20pasta/texto1.html" class="px-3" title="Informe Aqui!">
             <img data-perfmatters-preload="" src="https://w7.pngwing.com/pngs/568/379/png-transparent-technology-computer-icons-technology-electronics-text-logo.png" alt="Informe Aqui!" height="100" width="150">
             </a>
-            <div>
-
-        <h1>Informe Aqui!</h1>
+</div>
+         
+<div>
+        <h1 class="display-4">Informe Aqui!</h1>
         <nav>
-            <ul>
+            <ul class="list-unstyled d-flex">
                 <li><a href="#">Início</a></li>
                 <li><a href="{{route('MostrarCategoria')}}">Categorias</a></li>
                 <li><a href="#">Notícias</a></li>
@@ -103,7 +113,7 @@ nav ul li a {
                 <li><a href="#">Vídeos</a></li>
             </ul>
         </nav>
-    </div>
+ </div>       
     </header>
 
     <!-- Carrossel de Imagens -->
@@ -131,6 +141,8 @@ nav ul li a {
             <span class="sr-only">Próximo</span>
         </a>
     </div>
+    
+    
 
     <main>
         <section class="text-center" id="destaque">
@@ -139,44 +151,46 @@ nav ul li a {
 
             <div class="card-group">
 
+  @foreach($postagens as $value)
 
-            @foreach($postagens as $value)
 
                 <div class="card">
-                <img src="data:image/png;base64,{{ $value->foto }}" />
+                <img src="data:image/png;base64,{{ $value->foto }}" class="text-center"/>
 
                   <div class="card-body">
                     <h5 class="card-title"><a href="https://www.adrenaline.com.br/microsoft/windows/melhorar-desempenho-em-jogos-windows-11/"><p style="text-align:center;">{{ $value->titulo }}</p></a></h5>
-                   <!-- <p class="card-text">6 dicas para melhorar o desempenho do PC em jogos no Windows 11</p> -->
                     <h6></h6>
-                    <p class="card-text"><small class="text-muted">{{ $value->created_at }}</small></p>
+                    </div>
                   </div>
+                  
+               @endforeach     
+                  
                 </div>
-
-            @endforeach
-
-
-
-
-
-
-
-
         </section>
 
+
         <section id="categorias">
+
+          <div class="card bg-transparent my-5 p-5 d-flex align-items-center">
             <h2>Categorias</h2>
             <!-- Lista de categorias -->
-            <ul>
+            
+            <div class="mx-5">
+            <ul class="list-group list-group-horizontal list-unstyled p-3">
                 <li><a href="#">Análises</a></li>
                 <li><a href="#">Artigos</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Produtos</a></li>
                 <li><a href="#">Comparativos</a></li>
                 <li><a href="#">Vídeos</a></li>
-            </ul>
+            </ul> 
+          </div>
+            
+            </div>
         </section>
-    </main>
+</main>
+
+</div>  <!-- Fechando container -->
 
     <footer>
         <p>&copy; 2024 Informe Aqui. Todos os direitos reservados.</p>
